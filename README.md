@@ -97,5 +97,5 @@ This project was developed as a technical demonstration and is not intended for 
 ## Screenshots
 
 ## Screenshots
-![Users Screen](screenshots/users.png)
-![Todos Screen](screenshots/todos.png)
+![Users Screen](users.png)
+![Todos Screen](todo.png)
