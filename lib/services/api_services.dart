@@ -6,12 +6,15 @@ import '../models/todo.dart';
 
 class ApiService {
   static const String _baseUrl = 'https://jsonplaceholder.typicode.com';
+  final http.Client _client;
+
+  ApiService({http.Client? client}) : _client = client ?? http.Client();
 
   Future<List<User>> fetchUsers() async {
     final uri = Uri.parse('$_baseUrl/users');
 
     try {
-      final res = await http.get(uri);
+      final res = await _client.get(uri);
       if (res.statusCode != 200) {
         throw Exception('Failed to load users (HTTP ${res.statusCode}).');
       }
@@ -29,7 +32,7 @@ class ApiService {
     final uri = Uri.parse('$_baseUrl/todos?userId=$userId');
 
     try {
-      final res = await http.get(uri);
+      final res = await _client.get(uri);
       if (res.statusCode != 200) {
         throw Exception('Failed to load todos (HTTP ${res.statusCode}).');
       }
