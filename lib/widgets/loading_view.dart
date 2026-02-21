@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+/// Simple reusable loading widget used across screens.
 class LoadingView extends StatelessWidget {
   final String message;
 

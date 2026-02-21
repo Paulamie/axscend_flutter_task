@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+/// Reusable error widget with a retry action.
+/// Screens provide [onRetry] to re-run the failed Future.
 class ErrorView extends StatelessWidget {
   final String message;
   final VoidCallback onRetry;

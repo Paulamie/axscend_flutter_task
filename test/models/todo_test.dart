@@ -1,6 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:axscend_flutter_task/models/todo.dart';
 
+// Unit tests for model parsing. Ensures JSON → Dart mapping is correct.
 void main() {
   test('Todo.fromJson parses expected fields', () {
     final json = {

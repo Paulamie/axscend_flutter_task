@@ -1,3 +1,4 @@
+/// Represents a todo returned by JSONPlaceholder `/todos`.
 class Todo {
   final int id;
   final int userId;
@@ -11,6 +12,7 @@ class Todo {
     required this.completed,
   });
 
+/// Builds a Todo from API JSON.
   factory Todo.fromJson(Map<String, dynamic> json) {
     return Todo(
       id: json['id'] as int,

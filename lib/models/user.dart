@@ -1,3 +1,5 @@
+/// Represents a user returned by JSONPlaceholder `/users`.
+/// Kept minimal: only fields needed by the UI.
 class User {
   final int id;
   final String name;
@@ -11,6 +13,8 @@ class User {
     required this.companyName,
   });
 
+/// Builds a User from API JSON.
+/// Uses safe defaults (empty strings) to avoid crashes on missing fields.
   factory User.fromJson(Map<String, dynamic> json) {
     final company = json['company'] as Map<String, dynamic>?;
     return User(

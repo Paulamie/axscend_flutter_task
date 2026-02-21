@@ -4,6 +4,7 @@ import 'package:http/testing.dart';
 
 import 'package:axscend_flutter_task/services/api_services.dart';
 
+// ApiService is tested with a MockClient so tests are deterministic and fast.
 void main() {
   test('fetchUsers returns parsed users when status is 200', () async {
     final client = MockClient((http.Request request) async {
